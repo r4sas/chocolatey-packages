@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'; # stop on all errors
 $packagename = 'i2pd'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url = 'https://github.com/PurpleI2P/i2pd/releases/download/2.20.0/i2pd_2.20.0_win32_mingw.zip'
-$checksum = 'AD9A910A50F42598E7425DF137A0FEDFF929E91F095FC284F055F2E4BB38258A'
+$url = 'https://github.com/PurpleI2P/i2pd/releases/download/2.21.0/i2pd_2.21.0_win32_mingw.zip'
+$checksum = 'C2BD73CDB57D8522DECAA9BADB0F00184DD20031EC86B539D034E51AD5C0434B'
 $checksumType = 'sha256'
-$url64 = 'https://github.com/PurpleI2P/i2pd/releases/download/2.20.0/i2pd_2.20.0_win64_mingw.zip'
-$checksum64 = 'B819B5F2C390E04C6CB4B5619498B5C0B2E948CEB4FE22FBAF3E0DB3A5EBC422'
+$url64 = 'https://github.com/PurpleI2P/i2pd/releases/download/2.21.0/i2pd_2.21.0_win64_mingw.zip'
+$checksum64 = 'F34ED8DD22C3E4731E66752A9DA6E73F090B58ABB66F44F875BC6638E463FEA9'
 $checksumType64 = 'sha256'
 
 Install-ChocolateyZipPackage -packageName "$packagename" `
