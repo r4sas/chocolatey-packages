@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>i2pd</id>
-    <version>2.28.0</version>
+    <version>2.29.0</version>
     <packageSourceUrl>https://github.com/r4sas/chocolatey-packages/tree/master/i2pd/</packageSourceUrl>
     <owners>r4sas</owners>
     <title>I2P Daemon</title>
@@ -104,14 +104,12 @@ License
 
 This project is licensed under the BSD 3-clause license, which can be found in the file
 LICENSE in the root of the project source code.</description>
-    <releaseNotes>1. RAW datagrams in SAM
-2. Publishing encrypted LeaseSet2 with DH or PSH authentication
-3. Ability to disable battery optimization for Android
-4. Transport Network ID Check
-5. Set and handle published encrypted flag for LeaseSet2
-6. Fixed ReceiveID occasional change in the same stream
-7. Handle "\r\n" command terminator in SAM 
-8. Correct handling of addressbook lines with signatures</releaseNotes>
+    <releaseNotes>1. Send and handle client auth flag for b33 address
+2. Fixed SAM crash if invalid lookup address
+3. Fixed possible crash when UPnP enabled on shutdown
+4. Fixed failure to start on Windows XP
+5. Handle errors for NTCP2 SessionConfrimed send
+6. Remove incoming  NTCP2 session from pending list when established</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
