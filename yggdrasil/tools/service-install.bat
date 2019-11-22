@@ -1,0 +1,40 @@
+@set @_cmd=1 /*
+@echo off
+setlocal EnableExtensions
+title Yggdrasil
+
+whoami /groups | findstr "S-1-16-12288" >nul && goto :admin
+if "%~1"=="RunAsAdmin" goto :error
+
+echo Requesting privileges elevation for managing the dnscrypt-proxy service . . .
+cscript /nologo /e:javascript "%~f0" || goto :error
+exit /b
+
+:error
+echo.
+echo Error: Administrator privileges elevation failed,
+echo        please manually run this script as administrator.
+echo.
+goto :end
+
+:admin
+pushd "%ProgramFiles%\Yggdrasil"
+sc stop "Yggdrasil" >NUL 2>&1
+sc delete "Yggdrasil" >NUL 2>&1
+
+REM add delay before re-creation
+timeout 1 /nobreak >NUL
+
+sc create "Yggdrasil" binPath= "\"%CD%\yggdrasil.exe\" -useconffile \"%CD%\yggdrasil.conf\"" start= "auto"
+sc description "Yggdrasil" "An experiment in scalable routing as an encrypted IPv6 overlay network"
+sc start "Yggdrasil"
+popd
+
+:end
+set /p =Press [Enter] to exit . . .
+exit /b */
+
+// JScript, restart batch script as administrator
+var objShell = WScript.CreateObject('Shell.Application');
+var ComSpec = WScript.CreateObject('WScript.Shell').ExpandEnvironmentStrings('%ComSpec%');
+objShell.ShellExecute(ComSpec, '/c ""' + WScript.ScriptFullName + '" RunAsAdmin"', '', 'runas', 1);

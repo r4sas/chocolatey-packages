@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>yggdrasil</id>
+    <version>0.3.11</version>
+    <packageSourceUrl>https://github.com/r4sas/chocolatey-packages/tree/master/yggdrasil/</packageSourceUrl>
+    <owners>r4sas</owners>
+
+    <title>Yggdrasil network</title>
+    <authors>__REPLACE_AUTHORS_OF_SOFTWARE_COMMA_SEPARATED__</authors>
+    <projectUrl>https://yggdrasil-network.github.io/</projectUrl>
+    <!--<iconUrl>https://github.com/yggdrasil-network/yggdrasil-go/blob/master/contrib/logo/ygg-neilalexander.svg</iconUrl>-->
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <licenseUrl>https://github.com/yggdrasil-network/yggdrasil-go/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/yggdrasil-network/yggdrasil-go</projectSourceUrl>
+    <docsUrl>https://yggdrasil-network.github.io/</docsUrl>
+    <bugTrackerUrl>https://github.com/yggdrasil-network/yggdrasil-go/issues</bugTrackerUrl>
+    <tags>yggdrasil admin network encryption security mesh ipv6 decentralized</tags>
+    <summary>An experiment in scalable routing as an encrypted IPv6 overlay network</summary>
+    <description># Yggdrasil
+
+Yggdrasil is an early-stage implementation of a fully end-to-end encrypted IPv6
+network. It is lightweight, self-arranging, supported on multiple platforms and
+allows pretty much any IPv6-capable application to communicate securely with
+other Yggdrasil nodes. Yggdrasil does not require you to have IPv6 Internet
+connectivity - it also works over IPv4.
+
+Although Yggdrasil shares many similarities with
+[cjdns](https://github.com/cjdelisle/cjdns), it employs a different routing
+algorithm based on a globally-agreed spanning tree and greedy routing in a
+metric space, and aims to implement some novel local backpressure routing
+techniques. In theory, Yggdrasil should scale well on networks with
+internet-like topologies.</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
