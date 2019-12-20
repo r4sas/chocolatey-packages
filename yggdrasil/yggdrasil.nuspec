@@ -10,7 +10,7 @@
     <title>Yggdrasil Network</title>
     <authors>Yggdrasil Network</authors>
     <projectUrl>https://yggdrasil-network.github.io/</projectUrl>
-    <iconUrl>https://github.com/r4sas/chocolatey-packages/blob/master/yggdrasil/logo/yggdrasil-512.png</iconUrl>
+    <iconUrl>https://github.com/r4sas/chocolatey-packages/blob/master/yggdrasil/icon/yggdrasil-512.png</iconUrl>
     <licenseUrl>https://github.com/yggdrasil-network/yggdrasil-go/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/yggdrasil-network/yggdrasil-go</projectSourceUrl>
