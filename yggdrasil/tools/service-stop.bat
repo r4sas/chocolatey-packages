@@ -19,7 +19,6 @@ goto :end
 
 :admin
 sc stop "Yggdrasil"
-sc delete "Yggdrasil"
 
 :end
 set /p =Press [Enter] to exit . . .

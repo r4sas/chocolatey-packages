@@ -18,17 +18,7 @@ echo.
 goto :end
 
 :admin
-pushd "%ProgramFiles%\Yggdrasil"
-sc stop "Yggdrasil" >NUL 2>&1
-sc delete "Yggdrasil" >NUL 2>&1
-
-REM add delay before re-creation
-timeout 1 /nobreak >NUL
-
-sc create "Yggdrasil" binPath= "\"%CD%\yggdrasil.exe\" -useconffile \"%CD%\yggdrasil.conf\"" start= "auto"
-sc description "Yggdrasil" "An experiment in scalable routing as an encrypted IPv6 overlay network"
 sc start "Yggdrasil"
-popd
 
 :end
 set /p =Press [Enter] to exit . . .
