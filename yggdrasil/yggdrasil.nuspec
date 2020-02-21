@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>yggdrasil</id>
-    <version>0.3.12</version>
+    <version>0.3.13</version>
     <packageSourceUrl>https://github.com/r4sas/chocolatey-packages/tree/master/yggdrasil/</packageSourceUrl>
     <owners>r4sas</owners>
 
@@ -26,8 +26,7 @@ allows pretty much any IPv6-capable application to communicate securely with
 other Yggdrasil nodes. Yggdrasil does not require you to have IPv6 Internet
 connectivity - it also works over IPv4.
 
-Although Yggdrasil shares many similarities with
-[cjdns](https://github.com/cjdelisle/cjdns), it employs a different routing
+Although Yggdrasil shares many similarities with [cjdns](https://github.com/cjdelisle/cjdns), it employs a different routing
 algorithm based on a globally-agreed spanning tree and greedy routing in a
 metric space, and aims to implement some novel local backpressure routing
 techniques. In theory, Yggdrasil should scale well on networks with
