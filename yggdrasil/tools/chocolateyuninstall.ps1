@@ -7,7 +7,7 @@ $startMenuDir    = "$([Environment]::GetFolderPath('CommonStartMenu'))\Programs\
 $softwareName   = 'Yggdrasil Network*'
 
 # Remove package, it don't touch configs
-Write-Host "We removing package, but doesn't touch your configs. You can still find them in '$confDir' directory"
+Write-Host "Package is being uninstalled, but configs are preserved. You can still find them in '$confDir' directory"
 
 [array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
 

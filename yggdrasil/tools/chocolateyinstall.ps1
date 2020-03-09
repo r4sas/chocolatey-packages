@@ -44,9 +44,15 @@ if (-not (Test-Path -Path $startMenuDir)) {
   New-Item -Path $startMenuDir -ItemType Directory
 }
 
+# Get PowerShell executable path
+$psPath = (Get-Command powershell.exe).Path
+
 Install-ChocolateyShortcut -shortcutFilePath "$startMenuDir\Start service.lnk" `
-  -targetPath "$toolsDir\service-start.bat" -workDirectory "$appDir" -description "Start yggdrasil service" -RunAsAdmin
+  -targetPath $psPath -Arguments "Start-Service -name 'Yggdrasil'" `
+  -workDirectory "$appDir" -description "Start yggdrasil service" -IconLocation "$toolsDir\yggdrasil.ico" -RunAsAdmin
 Install-ChocolateyShortcut -shortcutFilePath "$startMenuDir\Restart service.lnk" `
-  -targetPath "$toolsDir\service-restart.bat" -workDirectory "$appDir" -description "Restart yggdrasil service" -RunAsAdmin
+  -targetPath $psPath -Arguments "Restart-Service -name 'Yggdrasil'" `
+  -workDirectory "$appDir" -description "Restart yggdrasil service" -IconLocation "$toolsDir\yggdrasil.ico" -RunAsAdmin
 Install-ChocolateyShortcut -shortcutFilePath "$startMenuDir\Stop service.lnk" `
-  -targetPath "$toolsDir\service-stop.bat" -workDirectory "$appDir" -description "Stop yggdrasil service" -RunAsAdmin
+  -targetPath $psPath -Arguments "Stop-Service -name 'Yggdrasil'" `
+  -workDirectory "$appDir" -description "Stop yggdrasil service" -IconLocation "$toolsDir\yggdrasil.ico" -RunAsAdmin
