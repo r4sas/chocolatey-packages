@@ -5,10 +5,10 @@ $appDir          = "$([Environment]::GetFolderPath('ProgramFiles'))\Yggdrasil"
 $confDir         = "$([Environment]::GetFolderPath('CommonApplicationData'))\Yggdrasil"
 $startMenuDir    = "$([Environment]::GetFolderPath('CommonStartMenu'))\Programs\Yggdrasil"
 
-$url             = 'https://ci.appveyor.com/api/buildjobs/55fx2dl3atc2s77t/artifacts/yggdrasil-0.3.13-x86.msi'
-$url64           = 'https://ci.appveyor.com/api/buildjobs/55fx2dl3atc2s77t/artifacts/yggdrasil-0.3.13-x64.msi'
-$checksum        = 'eeb47dadc33c3018c3d8a74615999fe1da9a5305e299b6143f7a301f06ffe145'
-$checksum64      = 'fc9619d09a1a4972a90fc1b2fdcf2d09a0336213c3ccf7f7b3f51233e3f2ba9c'
+$url             = 'https://ci.appveyor.com/api/buildjobs/lxlxafgb68dsp7qt/artifacts/yggdrasil-0.3.14-x86.msi'
+$url64           = 'https://ci.appveyor.com/api/buildjobs/lxlxafgb68dsp7qt/artifacts/yggdrasil-0.3.14-x64.msi'
+$checksum        = '75d68b2cf5fccebbb85745f0477c7893b937831430299224a4976e80e0e2a26d'
+$checksum64      = '2ef20fc6ad376779ddef88f46c7a1054314e4d3f722c0857314391d3d2ba95ac'
 
 $packageArgs     = @{
   packageName    = $env:ChocolateyPackageName
