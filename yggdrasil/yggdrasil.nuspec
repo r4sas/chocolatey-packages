@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>yggdrasil</id>
-    <version>0.3.14</version>
+    <version>0.3.15</version>
     <packageSourceUrl>https://github.com/r4sas/chocolatey-packages/tree/master/yggdrasil/</packageSourceUrl>
     <owners>r4sas</owners>
 
