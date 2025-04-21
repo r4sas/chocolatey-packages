@@ -5,10 +5,10 @@ $appDir          = "$([Environment]::GetFolderPath('ProgramFiles'))\Yggdrasil"
 $confDir         = "$([Environment]::GetFolderPath('CommonApplicationData'))\Yggdrasil"
 $startMenuDir    = "$([Environment]::GetFolderPath('CommonStartMenu'))\Programs\Yggdrasil"
 
-$url             = 'https://github.com/yggdrasil-network/yggdrasil-go/releases/download/v0.5.4/yggdrasil-0.5.4-x86.msi'
-$url64           = 'https://github.com/yggdrasil-network/yggdrasil-go/releases/download/v0.5.4/yggdrasil-0.5.4-x64.msi'
-$checksum        = 'cfd779b51baf902713cb1dddd39a4a48beac77509f88f8010cabe88bee6219ab'
-$checksum64      = '02922e3fd36ab416ebaa871d9eec42c19ea041b04bf6270becd3d1c1e797dec9'
+$url             = 'https://github.com/yggdrasil-network/yggdrasil-go/releases/download/v0.5.12/yggdrasil-0.5.12-x86.msi'
+$url64           = 'https://github.com/yggdrasil-network/yggdrasil-go/releases/download/v0.5.12/yggdrasil-0.5.12-x64.msi'
+$checksum        = '9425482B447A852A968EAC82314BAEB4545FF2F3DBEC819E65BD519E73842454'
+$checksum64      = '3BB7978BAE4FD37DAFC575E0AB072CDA472CBC8B193EB3A583AC9AEBB53A99CD'
 
 $packageArgs     = @{
   packageName    = $env:ChocolateyPackageName
